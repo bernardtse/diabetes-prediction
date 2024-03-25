@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Diabetes Prediction</title>
+    <link rel="stylesheet" href="{{ url_for('static', filename='styles.css') }}">
+</head>
+<body>
+    <h1>Diabetes Prediction</h1>
+    <form action="/predict" method="post">
+        <label for="HighBP">High Blood Pressure:</label>
+        <input type="number" id="HighBP" name="HighBP" step="1" min="0" max="1" required>
+        
+        <label for="HighChol">High Cholesterol:</label>
+        <input type="number" id="HighChol" name="HighChol" step="1" min="0" max="1" required>
+        
+        <label for="CholCheck">Cholesterol Check:</label>
+        <input type="number" id="CholCheck" name="CholCheck" step="1" min="0" max="1" required>
+        
+        <label for="BMI">BMI:</label>
+        <input type="number" id="BMI" name="BMI" step="0.1" required>
+        
+        <label for="Smoker">Smoker:</label>
+        <input type="number" id="Smoker" name="Smoker" step="1" min="0" max="1" required>
+        
+        <label for="Fruits">Fruits:</label>
+        <input type="number" id="Fruits" name="Fruits" step="1" min="0" max="1" required>
+        
+        <label for="GenHlth">General Health:</label>
+        <input type="number" id="GenHlth" name="GenHlth" step="1" required>
+        
+        <label for="MentHlth">Mental Health:</label>
+        <input type="number" id="MentHlth" name="MentHlth" step="1" required>
+        
+        <label for="Sex">Sex:</label>
+        <input type="number" id="Sex" name="Sex" step="1" min="0" max="1" required>
+        
+        <label for="Age">Age:</label>
+        <input type="number" id="Age" name="Age" step="1" required>
+        
+        <label for="Education">Education:</label>
+        <input type="number" id="Education" name="Education" step="1" required>
+        
+        <label for="Income">Income:</label>
+        <input type="number" id="Income" name="Income" step="1" required>
+        
+        <button type="submit">Predict</button>
+    </form>
+</body>
+</html>
