@@ -23,7 +23,7 @@ The ultimate goal is to gain insights into the significant factors contributing 
 
 
 ## <a id="Requirements"></a>Requirements
-- A web browser capable of running Google Colab.
+- A web browser capable of running Google Colab
 
 ## <a id="Getting-Started"></a>Getting Started
 
@@ -44,7 +44,7 @@ The ultimate goal is to gain insights into the significant factors contributing 
    
       or
    
-   - Open the notebook directly at [https://colab.research.google.com/github/bernardtse/diabetes_prediction/blob/main/DiabetesPrediction.ipynb](https://colab.research.google.com/github/bernardtse/diabetes_prediction/blob/main/DiabetesPrediction.ipynb)
+   - Open the notebook directly at [https://colab.research.google.com/github/bernardtse/diabetes_prediction/blob/main/DiabetesPrediction.ipynb](https://colab.research.google.com/github/bernardtse/diabetes_prediction/blob/main/DiabetesPrediction.ipynb).
 
 2. Ensure that you have the necessary libraries installed. The notebook requires the following libraries:
 
@@ -95,7 +95,7 @@ The notebook is designed to run on the cloud environment provided by Google Cola
    
 5. **Model Evaluation:**
    - Confusion matrix
-   -  Receiver Operating Characteristic (ROC) curve and Area Under the Curve (AUC)
+   - Receiver Operating Characteristic (ROC) curve and Area Under the Curve (AUC)
    - Precision-recall curve
    
 6. **Hyperparameter Tuning:**
