@@ -24,6 +24,7 @@ The ultimate goal is to gain insights into the significant factors contributing 
 
 ## <a id="Requirements"></a>Requirements
 - A web browser capable of running Google Colab
+- A Google Account (for storage of data)
 
 ## <a id="Getting-Started"></a>Getting Started
 
@@ -52,18 +53,18 @@ The ultimate goal is to gain insights into the significant factors contributing 
    - `numpy`
    - `matplotlib`
    - `seaborn`
-   - `scikit-learn`
+   - `scikit-learn` / 'sklearn'
    - `tensorflow`
    - `keras-tuner`
 
    You can install these libraries in Google Colab by running the following code cell at the beginning of the notebook:
 
-   ```!pip install pandas numpy matplotlib seaborn scikit-learn tensorflow keras-tuner```
+   ```!pip install pandas numpy matplotlib seaborn scikit-learn sklearn tensorflow keras-tuner```
 
 3. Run the notebook cells sequentially to execute the code and interact with the project.
 
 **Note**
-The notebook is designed to run on the cloud environment provided by Google Colab. It utilises Spark for data processing, which is automatically set up within the Colab environment. Therefore, there is no need to install Spark locally.
+The notebook is designed to run on the cloud environment provided by Google Colab. It utilises the `Kaggle API` for data fetching and `Spark` for data processing. Both are automatically set up within the Colab environment. Therefore, there is no need to install Spark and the Kaggle API locally.
 
 ## <a id="Documentation"></a>Documentation
 

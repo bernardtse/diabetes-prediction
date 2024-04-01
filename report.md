@@ -60,8 +60,22 @@ The dataset utilised in this project was curated by Neha Prerna Tigga and Dr. Sh
    - Compared the performance of different models and discussed their strengths and weaknesses.
 
 
+This report evaluates the performance of various machine learning models in predicting the presence or absence of diabetes using a provided dataset. The models considered include Neural Network, SVM (Support Vector Machine), Logistic Regression, Decision Tree, Random Forest, and K-Nearest Neighbors (KNN).
+
+| Model | Accuracy | Precision (Diabetes Absent) | Precision (Diabetes Present) | Recall (Diabetes Absent) | Recall (Diabetes Present) | F1-score (Diabetes Absent) | F1-score (Diabetes Present) |
+| --- | --- | --- | --- | --- | --- | --- | --- | 
+| Neural Network | 97.24% | 97% | 98% | 99% | 92% | 98% | 95% |
+| SVM | 87.29% | 90% | 80% | 93% | 71% | 91% | 75% |
+| Logistic Regression | 85.64% | 88% | 78% | 93% | 65% | 90% | 71% |
+| Decision Tree | 96.13% | 96% | 96% | 98% | 90% | 97% | 93% |
+| Random Forest | 96.13% | 97% Precision | 94% | 98% | 92% | 97% | 93% |
+| KNN | 96.13% | 97% | 94% | 98% | 92% | 97% | 93% |
+
+
 
 ## <a id="Conclusion"></a>**Conclusion**
+
+The Neural Network model demonstrates the highest accuracy and balanced performance in predicting both classes. Decision Tree, Random Forest, and KNN also show promising results, closely following the Neural Network in terms of accuracy and performance metrics. SVM, and Logistic Regression exhibit lower accuracy and performance metrics compared to the other models. Based on the results, the Neural Network model is recommended for accurate and reliable diabetes prediction.
 
 Through this project, we demonstrate the application of machine learning techniques for diabetes prediction. By evaluating multiple models and optimizing their performance, we aim to provide valuable insights for healthcare professionals in diagnosing and managing diabetes effectively.
 
