@@ -1,4 +1,4 @@
-# DataDiagnostics - Diabetes Prediction Machine Learning Models Report
+# DataDiagnostics - Development of a Diabetes Prediction Model using Machine Learning (Report)
 
 ## Contents
 1. [Introduction](#Introduction)
@@ -69,24 +69,28 @@ This report evaluates the performance of various machine learning models in pred
 | Decision Tree | 96.13% | 96% | 96% | 98% | 90% | 97% | 93% |
 | SVM | 87.29% | 90% | 80% | 93% | 71% | 91% | 75% |
 | KNN | 96.13% | 97% | 94% | 98% | 92% | 97% | 93% |
-| Neural Network | 96.69% | 97% | 96% | 98% | 92% | 98% | 94% |
+| Neural Network | 97.27% | 97% | 98% | 99% | 92% | 98% | 95% |
 
 ### **Hyperparameter Tuning with GridSearchCV**
 - **Logistic Regression:**
-  - Best Parameters: {'C': 10, 'penalty': 'l2', 'solver': 'newton-cg'}
-  - Best Accuracy: 0.8632854406130267
+   - Best Parameters: {'C': 10, 'penalty': 'l2', 'solver': 'newton-cg'}
+   - Best Accuracy: 0.8632854406130267
+
 - **Random Forest:**
    - Best Parameters: {'max_depth': None, 'min_samples_split': 2, 'n_estimators': 200}
-   - Best Accuracy: 0.9489080459770115
+   - Best Accuracy: 0.947528735632184
+
 - **Decision Tree:**
    - Best Parameters: {'max_depth': 30, 'min_samples_leaf': 1, 'min_samples_split': 2}
-   - Best Accuracy: 0.9488984674329501
+   - Best Accuracy: 0.950287356321839
+
 - **SVM:**
-  - Best Parameters: {'C': 10, 'gamma': 'scale', 'kernel': 'poly'}
-  - Best Accuracy: 0.9350670498084291
+   - Best Parameters: {'C': 10, 'gamma': 'scale', 'kernel': 'poly'}
+   - Best Accuracy: 0.9350670498084291
+
 - **KNN:**
-  - Best Parameters: {'algorithm': 'ball_tree', 'n_neighbors': 3, 'weights': 'distance'}
-  - Best Accuracy: 0.9530459770114943
+   - Best Parameters: {'algorithm': 'ball_tree', 'n_neighbors': 3, 'weights': 'distance'}
+   - Best Accuracy: 0.9530459770114943
 
 ## <a id="Conclusion"></a>**6. Conclusion**
 

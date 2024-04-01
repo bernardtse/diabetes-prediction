@@ -1,4 +1,4 @@
-# DataDiagnostics - Diabetes Prediction Machine Learning Models
+# DataDiagnostics - Development of a Diabetes Prediction Model using Machine Learning
 
 ## Project Overview
 
