@@ -4,29 +4,39 @@
 
 Diabetes is a prevalent chronic disease that affects millions of people worldwide. Early detection and prediction of diabetes are crucial for effective management and prevention of complications. This project aims to develop a predictive model to identify individuals at risk of developing diabetes based on various health indicators.
 
-By leveraging machine learning algorithms and techniques, this model will analyse anonymous health records encompassing parameters such as BMI, age, blood pressure, dietary habits, etc. The project will employ feature selection methods and experiment with various algorithms, including logistic regression, decision trees, random forests, and neural networks, to build a robust and accurate predictive tool.
+By leveraging machine learning algorithms and techniques, we will analyse anonymous health records encompassing parameters such as BMI, age, blood pressure, dietary habits, etc. The project will employ feature selection methods and experiment with various algorithms, including logistic regression, decision trees, random forests, and neural networks, to build a robust and accurate predictive tool.
 
-The ultimate goal is to gain insights into the significant factors contributing to the prediction of diabetes occurrence. Through early detection and intervention, the project aims to contribute to better management and prevention of diabetes, thus improving public health outcomes. The main component of this project is a Jupyter Notebook (`diabetes_prediction.ipynb`), which is intended to be run in Google Colaboratory (Google Colab). The notebook demonstrates the process of predicting diabetes using various machine learning models, covering  data preprocessing, exploratory data analysis, model training, evaluation, and comparison.
+The ultimate goal is to gain insights into the significant factors contributing to the prediction of diabetes occurrence. Through early detection and intervention, the project aims to contribute to better management and prevention of diabetes, thus improving public health outcomes.
+
+The main component of this project is a Jupyter Notebook (`diabetes_prediction.ipynb`), which is intended to be run in Google Colaboratory (Google Colab). The notebook demonstrates the process of predicting diabetes using various machine learning models, covering  data preprocessing, exploratory data analysis, model training, evaluation, and comparison.
 
 
 ## Contents
-- [Requirements](#Requirements)
-- [Getting Started](#Getting-Started)
-- [Documentation](#Documentation)
-- [Notebook Contents](#Notebook-Contents)
-- [Ethical Considerations](#Ethical-Considerations)
-- [Conclusion](#Conclusion)
-- [References](#References)
-- [Acknowledgments](#Acknowledgments)
-- [Collaborators](#Collaborators)
+1. [Requirements](#Requirements)
+2. [Getting Started](#Getting-Started)
+3. [Documentation](#Documentation)
+4. [Notebook Contents](#Notebook-Contents)
+5. [Ethical Considerations](#Ethical-Considerations)
+6. [Conclusion](#Conclusion)
+7. [References](#References)
+8. [Acknowledgments](#Acknowledgments)
+9. [Collaborators](#Collaborators)
 
 
 
-## <a id="Requirements"></a>Requirements
+## <a id="Requirements"></a>1. Requirements
 - A web browser capable of running Google Colab
-- A Google Account (for storage of data)
+- A Kaggle account (for data fetching)
+- A Google account (for storage of data)
 
-## <a id="Getting-Started"></a>Getting Started
+## <a id="Getting-Started"></a>2. Getting Started
+
+**Kaggle**
+1. Sign in to [Kaggle](https://kaggle.com).
+
+2. Go to Settings.
+
+3. Under the API section, create and download token `kaggle.json`.
 
 **GitHub Repository**
 1. Clone the repository:
@@ -39,15 +49,13 @@ The ultimate goal is to gain insights into the significant factors contributing 
 
 **Running the notebook in Google Colab**
 
-1. Open Google Colab by going to [https://colab.research.google.com/](https://colab.research.google.com/).
+1. Sign in to [Google Colab](https://colab.research.google.com/).
 
-   - Upload the notebook file [`diabetes_prediction.ipynb`] to Google Colab.
-   
-      or
-   
-   - Open the notebook directly at [https://colab.research.google.com/github/bernardtse/diabetes_prediction/blob/main/DiabetesPrediction.ipynb](https://colab.research.google.com/github/bernardtse/diabetes_prediction/blob/main/DiabetesPrediction.ipynb).
+2. Upload the notebook file `diabetes_prediction.ipynb` to Google Colab.
 
-2. Ensure that you have the necessary libraries installed. The notebook requires the following libraries:
+3. Upload `kaggle.json` to the path specified in the Jupyter notebook in Google Drive (Default path: `My Drive`). If `kaggle.json` was already installed previously, modify the `kaggle_token_path` variable in the notebook to specify the path for Kaggle token.
+
+4. Ensure that you have the necessary libraries installed. The notebook requires the following libraries:
 
    - `pandas`
    - `numpy`
@@ -59,20 +67,23 @@ The ultimate goal is to gain insights into the significant factors contributing 
 
    You can install these libraries in Google Colab by running the following code cell at the beginning of the notebook:
 
-   ```!pip install pandas numpy matplotlib seaborn scikit-learn sklearn tensorflow keras-tuner```
+   ```!pip install pandas numpy matplotlib seaborn scikit-learn tensorflow keras-tuner```
 
-3. Run the notebook cells sequentially to execute the code and interact with the project.
+5. Run the notebook cells sequentially to execute the code and interact with the project.
 
 **Note**
 The notebook is designed to run on the cloud environment provided by Google Colab. It utilises the `Kaggle API` for data fetching and `Spark` for data processing. Both are automatically set up within the Colab environment. Therefore, there is no need to install Spark and the Kaggle API locally.
 
-## <a id="Documentation"></a>Documentation
+## <a id="Documentation"></a>3. Documentation
 
 - **README**: Project overview and the instructions of running the Jupyter notebook is available in [`README.md`](README.md).
 - **Project Report**: The project design, data processing procedures, model building and evaluation, tuning and optimisation are included in [`report.md`](report.md). The results of each model is presented and compared.
+- Graphs generated by the Jupyter notebook are stored in the [`images/`](images/) folder.
+- Processed dataset is stored in [`resources/processed_dataset.csv`](resources/processed_dataset.csv).
+- Model architecture for neural network is stored in [`resources/model.json`](resources/model.json).
+- Model weights for neural network is stored in [`resources/model_weights.h5`](resources/model_weights.h5).
 
-
-## <a id="Notebook-Contents"></a>Notebook Contents
+## <a id="Notebook-Contents"></a>4. Notebook Contents
 
 1. **Introduction:**
    - Overview of the problem and dataset.
@@ -100,32 +111,32 @@ The notebook is designed to run on the cloud environment provided by Google Cola
    - Precision-recall curve
    
 6. **Hyperparameter Tuning:**
-   - Hyperparameter Tuning by GridSearchCV
+   - Hyperparameter Tuning with GridSearchCV
    
 7. **Neural Network Optimisation:**
-   - Hyperparameter optimisation by Keras Tuner
+   - Hyperparameter optimisation with Keras Tuner
 
 8. **Results and Summary Report:**
    - Evaluation summary of each model
    - Comparisons of different models
 
 
-## <a id="Ethical-Considerations"></a>Ethical Considerations
+## <a id="Ethical-Considerations"></a>5. Ethical Considerations
 In the development of a machine learning model for diabetes prediction using a Kaggle dataset, ethical considerations play a central role. It is essential to prioritise data privacy, maintain transparency in model development, and ensure equitable access to healthcare insights. Additionally, efforts to mitigate bias in data collection and algorithmic decision-making are vital for responsible and ethical deployment in healthcare contexts.
 
-## <a id="Conclusion"></a>Conclusion
+## <a id="Conclusion"></a>6. Conclusion
 
 Through this project, we demonstrate the application of machine learning techniques for diabetes prediction. By evaluating multiple models and optimising their performance, we aim to provide valuable insights for healthcare professionals in diagnosing and managing diabetes effectively.
 
 **Note:** This project serves as an educational resource and does not replace professional medical advice. Always consult a healthcare provider for diagnosis and treatment of medical conditions.
 
-## <a id="References"></a>References
+## <a id="References"></a>7. References
 **Dataset**: https://www.kaggle.com/datasets/tigganeha4/diabetes-dataset-2019
 
-## <a id="Acknowledgments"></a>Acknowledgments
+## <a id="Acknowledgments"></a>8. Acknowledgments
 We would like to thank all contributors and participants who have made this project possible.
 
-## <a id="Collaborators"></a>Collaborators
+## <a id="Collaborators"></a>9. Collaborators
 - [Aysha Gheewala](https://github.com/AyshaGheewala)
 - [Godswill Anyasor](https://github.com/AnyasorG)
 - [Kehlani Khan](https://github.com/kehlanijaan)
