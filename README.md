@@ -19,7 +19,7 @@
 
 Diabetes is a prevalent chronic disease affecting millions worldwide. Early detection and prediction are crucial for effective management and complication prevention. This project aims to develop a predictive model to identify individuals at risk of diabetes using various health indicators.
 
-By leveraging machine learning algorithms, anonymous health records, including parameters like BMI, age, blood pressure, and dietary habits, are analyzed. Feature selection methods and various algorithms such as Logistic Regression, Random Forest, Decision Tree, Support Vector Machines (SVM), K-Nearest Neighbors (KNN), and Neural Network are employed to build a robust predictive tool.
+By leveraging machine learning algorithms, anonymous health records, including parameters like BMI, age, blood pressure, and dietary habits, are analysed. Feature selection methods and various algorithms such as Logistic Regression, Random Forest, Decision Tree, Support Vector Machines (SVM), K-Nearest Neighbors (KNN), and Neural Network are employed to build a robust predictive tool.
 
 The project's main goal is to gain insights into significant factors contributing to diabetes prediction, contributing to better management and prevention, and improving public health outcomes. Additionally, a user-friendly web application has been developed to make the predictive model accessible. This application allows users to input their health parameters and receive predictions of their diabetes risk, along with explanations and insights into contributing factors.
 
@@ -128,17 +128,17 @@ viii. **Results and Summary Report:**
 
 ## 6. **Model Visualisation Using Web App**
 
-- For the visualisation of the diabetes prediction model, a web application was developed using Python Flask for the backend, HTML and CSS for the frontend, and JavaScript (script.js) for interactivity stored in [`webapp/`](webapp/) folder.
+- For the visualisation of the diabetes prediction model, a web application was developed using Python Flask for the backend, HTML and CSS for the frontend, and JavaScript (`script.js`) for interactivity stored in [`webapp/`](webapp/) folder.
 
-- The web application provides an intuitive interface for users to input their health parameters and receive predictions of their diabetes risk. It utilizes the trained machine learning model to generate predictions based on the input data.
+- The web application provides an intuitive interface for users to input their health parameters and receive predictions of their diabetes risk. It utilises the trained machine learning model to generate predictions based on the input data.
 
-- The backend script (app.py) handles the prediction logic and communicates with the frontend through HTTP requests. The HTML files define the structure of the web pages, while CSS stylesheets are used for styling and layout. JavaScript (script.js) enhances user interactivity and handles dynamic content updates.
+- The backend script (`app.py`) handles the prediction logic and communicates with the frontend through HTTP requests. The HTML files define the structure of the web pages, while CSS stylesheets are used for styling and layout. JavaScript (`script.js`) enhances user interactivity and handles dynamic content updates.
 
 - To run the web application locally:
-  i. Ensure Python and Flask are installed on your system.
-  ii. Navigate to the project directory in the terminal.
-  iii. Run the following command to start the Flask server: python app.py
-  iv. Open a web browser and go to [http://localhost:5000](http://localhost:5000) to access the web application.
+  - i. Ensure Python and Flask are installed on your system.
+  - ii. Navigate to the project directory in the terminal.
+  - iii. Run the following command to start the Flask server: `python app.py`
+  - iv. Open a web browser and go to [http://localhost:5000](http://localhost:5000) to access the web application.
 
 
 ## 7. Ethical Considerations
