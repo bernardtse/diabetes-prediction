@@ -63,7 +63,7 @@ The following are the parameters of the raw dataset in Kaggle:
    - `Pregancies` and `UriationFreq` renamed to `Pregnancies` and `UrinationFreq` (for spelling accuracy)
 
 2. **Handling Redundant Columns:**
-   - `highBP` was dropped due to overlap with `BPLevel`. This reduces the possibility of conflicting information (e.g., "yes" in highBP and "normal" in BPLevel).
+   - `highBP` was dropped due to overlap with `BPLevel`. This reduces the possibility of conflicting information (e.g., 'yes' in `highBP` and 'normal' in `BPLevel`).
 
 3. **Missing Value Imputation:**
    - Rows containing missing values were removed entirely. This resulted in a reduced dataset size of 905 entries.
