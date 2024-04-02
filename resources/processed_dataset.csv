@@ -1,4 +1,4 @@
-,Age,Gender,Family_Diabetes,PhysicallyActive,BMI,Smoking,Alcohol,Sleep,SoundSleep,RegularMedicine,JunkFood,Stress,BPLevel,Pregancies,Pdiabetes,UrinationFreq,Diabetic
+,Age,Gender,FamilyDiabetes,PhysicallyActive,BMI,Smoking,Alcohol,Sleep,SoundSleep,RegularMedicine,JunkFood,Stress,BPLevel,Pregnancies,GDiabetes,UrinationFreq,Diabetic
 0,2,0,0,3,39.0,0,0,8,6.0,0,0,1,2,0.0,0,0,0
 1,2,0,0,1,28.0,0,0,8,6.0,1,2,1,1,0.0,0,0,0
 2,1,0,0,3,24.0,0,0,6,6.0,0,0,1,1,0.0,0,0,0
