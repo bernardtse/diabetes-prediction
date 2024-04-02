@@ -143,7 +143,7 @@ Through this project, we demonstrated the application of machine learning techni
 ## 8. References
 
 - **Dataset:** https://www.kaggle.com/datasets/tigganeha4/diabetes-dataset-2019
-- **Research Paper For the Dataset:** Tigga, N. P., & Garg, S. (2020). Prediction of Type 2 Diabetes using Machine Learning Classification Methods. Procedia Computer Science, 167, 706-716. DOI: https://doi.org/10.1016/j.procs.2020.03.336
+- **Research Paper for the Dataset:** Tigga, N. P., & Garg, S. (2020). Prediction of Type 2 Diabetes using Machine Learning Classification Methods. Procedia Computer Science, 167, 706-716. DOI: https://doi.org/10.1016/j.procs.2020.03.336
 - **Diabetes Facts & Figures - International Diabetes Federation:** https://idf.org/about-diabetes/diabetes-facts-figures/
 
 
