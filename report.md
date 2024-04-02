@@ -35,13 +35,13 @@ The following are the parameters of the raw dataset in Kaggle:
    | 1. | **Age** | Age | less than 40, 40-49, 50-59, 60 or older |
    | 2. | **Gender** | Gender | male, female |
    | 3. | **Family history with diabetes** | Family_Diabetes | yes, no |
-   | 4. | **Diagnosed with high blood pressure** | highBP | yes, No |
+   | 4. | **Diagnosed with high blood pressure** | highBP | yes, no |
    | 5. | **Walk/run/physically active** | PhysicallyActive | none, less than half an hour, more than half an hour, one hour or more |
    | 6. | **BMI** | BMI | numeric |
    | 7. | **Smoking** | Smoking | yes, no |
-   | 8. | **Alcohol consumption** | Alcohol | yes, no
-   | 9. | **Hours of sleep** | Sleep | numeric
-   | 10. | **Hours of sound sleep** | SoundSleep | numeric
+   | 8. | **Alcohol consumption** | Alcohol | yes, no |
+   | 9. | **Hours of sleep** | Sleep | numeric |
+   | 10. | **Hours of sound sleep** | SoundSleep | numeric |
    | 11. | **Regular intake of medicine?** | RegularMedicine | yes, no |
    | 12. | **Junk food consumption** | JunkFood | yes, no |
    | 13. | **Stress** | Stress | not at all, sometimes, often, always |
