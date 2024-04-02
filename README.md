@@ -1,4 +1,4 @@
-![DataDiagnostics](images/heading.png)
+![DataDiagnostics](images/header.png)
 # DataDiagnostics - Development of a Diabetes Prediction Model using Machine Learning
 
 ## Contents
