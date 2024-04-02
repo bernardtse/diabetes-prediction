@@ -61,7 +61,7 @@ The following are the parameters of the raw dataset in Kaggle:
 1. **Parameter Renaming:**
    - `Family_Diabetes` renamed to `FamilyDiabetes` (for consistency)
    - `Pdiabetes` renamed to `GDiabetes` (for clarity in meaning)
-   - `Pregancies` and `UriationFreq` renamed to `Pregnancies` and `UrinationFreq` (for spelling accuracy)
+   - `Pregancies` and `UriationFreq` renamed to `Pregnancies` and `UrinationFreq`, respectively (for spelling accuracy)
 
 2. **Handling Redundant Columns:**
    - `highBP` was dropped due to overlap with `BPLevel`. This reduces the possibility of conflicting information (e.g., 'yes' in `highBP` and 'normal' in `BPLevel`).
