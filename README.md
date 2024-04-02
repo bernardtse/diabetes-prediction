@@ -112,7 +112,7 @@ The notebook is designed to run on the cloud environment provided by Google Cola
    - K-Nearest Neighbors (KNN)
    - Neural Network
    
-5. **Model Evaluation:**
+5. **Model Evaluations:**
    - Confusion matrix
    - Receiver Operating Characteristic (ROC) curve and Area Under the Curve (AUC)
    - Precision-recall curve
