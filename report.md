@@ -1,5 +1,6 @@
 ![DataDiagnostics](images/header.png)
-# DataDiagnostics: Development of a Diabetes Prediction Model using Machine Learning (Report)
+# DataDiagnostics Group
+# Project Title: Development of a Diabetes Prediction Model using Machine Learning (Report)
 
 ## Contents
 1. [Introduction](#1-introduction)
