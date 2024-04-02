@@ -2,21 +2,20 @@
 # DataDiagnostics - Development of a Diabetes Prediction Model using Machine Learning (Report)
 
 ## Contents
-1. [Introduction](#Introduction)
-2. [Dataset](#Dataset)
-3. [Data Pre-Processing](#Data-Pre-Processing)
-4. [Model Building and Tuning](#Models)
-5. [Results](#Results)
-6. [Conclusion](#Conclusion)
-7. [References](#References)
+1. [Introduction](#1-introduction)
+2. [Dataset](#2-dataset)
+3. [Data Pre-Processing](#3-data-pre-processing)
+4. [Model Building and Tuning](#4-model-building-and-tuning-and-evaluation)
+5. [Results](#5-results)
+6. [Conclusion](#6-conclusion)
+7. [References](#7-references)
 
-
-## <a id="Introduction"></a>**1. Introduction**
+## 1. Introduction
 
 According to the International Diabetes Federation, approximately 537 million adults (20-79 years) are living with diabetes. Around 90% of diabetes cases are Type 2, influenced by factors like economy, age, environment, and lifestyles. Preventive actions and early diagnosis can help mitigate diabetes impact. The project aims to predict Type 2 diabetes risk using machine learning algorithms based on lifestyle and family background. These accurate algorithms are essential in healthcare for risk assessment.
 
 
-## <a id="Dataset"></a>**2. Dataset**
+## 2. Dataset
 
 The [Kaggle](https://kaggle.com) [dataset](https://www.kaggle.com/datasets/tigganeha4/diabetes-dataset-2019) utilised in this project was curated by Neha Prerna Tigga and Dr. Shruti Garg from the Department of Computer Science and Engineering at Birla Institute of Technology, Mesra, for research purposes only and is not intended for commercial use. An [article](https://www.sciencedirect.com/science/article/pii/S1877050920308024) detailing the implementation of this dataset was published on [ScienceDirect](https://www.sciencedirect.com), providing further information.
 
@@ -54,7 +53,7 @@ The following are the parameters of the raw dataset in Kaggle:
 - **Size of the dataset:** 952
 
 
-## <a id="Data-Pre-Processing"></a>**3. Data Pre-Processing**
+## 3. Data Pre-Processing
 
 **Data Cleaning and Pre-Processing:**
 
@@ -85,7 +84,7 @@ The following are the parameters of the raw dataset in Kaggle:
    - **Correlation analysis:** Calculated Pearson correlation coefficients between features to identify potential correlations with the target parameter (diabetes).
    
 
-## <a id="Models"></a>**4. Model Building and Tuning and Evaluation**
+## 4. Model Building and Tuning and Evaluation
 
 **Model Building:**
    - **Logistic Regression:** Trained a logistic regression model as a baseline model.
@@ -108,7 +107,7 @@ The following are the parameters of the raw dataset in Kaggle:
    - Precision-recall curve: Visualised the trade-off between precision and recall for different threshold values.
 
 
-## <a id="Results"></a>**5. Results**
+## 5. Results
    - Evaluation summary of each model is presented, including their accuracy, precision, recall, F1-score, ROC-AUC, and precision-recall AUC.
    - Compared the performance of different models and discussed their strengths and weaknesses.
 
@@ -142,27 +141,27 @@ The following are the parameters of the raw dataset in Kaggle:
    - Best Parameters: {'algorithm': 'ball_tree', 'n_neighbors': 3, 'weights': 'distance'}
    - Best Accuracy: 0.9530459770114943
 
-### **Logistic Regression**
+### **Results: Logistic Regression**
 ![Logistic Regression](images/logisticregression_plot.png)
-### **Random Forest**
+### **Results: Random Forest**
 ![Random Forest](images/randomforest_plot.png)
-#### **Random Forest - Feature Importances**
+#### **Results: Random Forest - Feature Importances**
 ![Feature Importances](images/feature_importances.png)
-### **Decision Tree**
+### **Results: Decision Tree**
 ![Decision Tree](images/decisiontree_plot.png)
-### **SVM**
+### **Results: SVM**
 ![SVM](images/supportvectormachine_plot.png)
-### **KNN**
+### **Results: KNN**
 ![KNN](images/knearestneighbors_plot.png)
-### **Neural Network**
+### **Results: Neural Network**
 ![Neural Network](images/neuralnetwork_plot.png)
-#### **Neural Network - Training Accuracy**
+#### **Results: Neural Network - Training Accuracy**
 ![Training Accuracy](images/trainingaccuracy_plot.png)
-#### **Neural Network - Training Loss**
+#### **Results: Neural Network - Training Loss**
 ![Training Loss](images/trainingloss_plot.png)
 
 
-## <a id="Conclusion"></a>**6. Conclusion**
+## 6. Conclusion
 
 The Neural Network model demonstrates the highest accuracy and balanced performance in predicting Type 2 Diabetes. Random Forest, Decision Tree, and KNN also exhibit promising results, closely following the Neural Network in terms of accuracy and performance metrics. SVM and Logistic Regression show comparatively lower accuracy and performance metrics.
 
@@ -173,8 +172,8 @@ Hyperparameter tuning by GridSearchCV resulted in significant improvement for SV
 Based on the results, the Neural Network model is recommended for accurate and reliable diabetes prediction. However, considering computational resources, Random Forest, Decision Tree, and KNN are also viable options as they strike a balance between accuracy and efficiency.
 
 
-## <a id="References"></a>**7. References**
+## 7. References
 
 - **Dataset:** https://www.kaggle.com/datasets/tigganeha4/diabetes-dataset-2019
-- **Research Paper For the dataset:** Tigga, N. P., & Garg, S. (2020). Prediction of Type 2 Diabetes using Machine Learning Classification Methods. Procedia Computer Science, 167, 706-716. DOI: https://doi.org/10.1016/j.procs.2020.03.336
-- **Diabetes Facts & figures - International Diabetes Federation:** https://idf.org/about-diabetes/diabetes-facts-figures/
+- **Research Paper For the Dataset:** Tigga, N. P., & Garg, S. (2020). Prediction of Type 2 Diabetes using Machine Learning Classification Methods. Procedia Computer Science, 167, 706-716. DOI: https://doi.org/10.1016/j.procs.2020.03.336
+- **Diabetes Facts & Figures - International Diabetes Federation:** https://idf.org/about-diabetes/diabetes-facts-figures/
