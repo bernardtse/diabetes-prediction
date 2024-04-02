@@ -74,6 +74,10 @@ The following are the parameters of the raw dataset in Kaggle:
    - The following **ordinal categorical parameters** were converted to numerical values: `Age`, `PhysicallyActive`, `JunkFood`, `Stress`, `BPLevel`, `UrinationFreq`
    - This conversion allows these parameters to be used in machine learning algorithms that require numerical features.
 
+5. **Datasets Preview:**
+   - Raw dataset is stored in [`resources/diabetes_dataset__2019.csv`](resources/diabetes_dataset__2019.csv).
+   - Processed dataset is stored in [`resources/processed_dataset.csv`](resources/processed_dataset.csv).
+
 **Data Splitting:** 
 - Defined the target `Diabetic` and feature parameters and split the data into subsets ready for the training and testing of models.
    
