@@ -29,7 +29,7 @@ In the original study, Random Forest was found to be most accurate. In this proj
 In addition to the above models, Neural Network model was also employed to explore whether further improvements in accuracy could be achieved.
 
 The following are the parameters of the raw dataset in Kaggle:
-   |  | **Parameter** | **Header** | **Instances** |
+   |  | Parameter | Header | Instances |
    | ---- | ---- | ---- | ---- |
    | 1. | **Age** | Age | less than 40, 40-49, 50-59, 60 or older |
    | 2. | **Gender** | Gender | male, female |
@@ -105,41 +105,28 @@ The following are the parameters of the raw dataset in Kaggle:
    - Metrics: Calculated accuracy, precision, recall, F1-score to assess model performance.
    - ROC curve and AUC-ROC: Plotted the Receiver Operating Characteristic (ROC) curve and calculated the Area Under the Curve (AUC) to evaluate model discrimination.
    - Precision-recall curve: Visualised the trade-off between precision and recall for different threshold values.
+   - Performance of different models was compared and their strengths and weaknesses were discussed.
 
 
 ## 5. Results
-   - Evaluation summary of each model is presented, including their accuracy, precision, recall, F1-score, ROC-AUC, and precision-recall AUC.
-   - Compared the performance of different models and discussed their strengths and weaknesses.
 
 | Model | Accuracy | Precision (Diabetes Absent) | Precision (Diabetes Present) | Recall (Diabetes Absent) | Recall (Diabetes Present) | F1-score (Diabetes Absent) | F1-score (Diabetes Present) |
 | --- | --- | --- | --- | --- | --- | --- | --- | 
-| Logistic Regression | 85.64% | 88% | 78% | 93% | 65% | 90% | 71% |
-| Random Forest | 96.13% | 97% | 94% | 98% | 92% | 97% | 93% |
-| Decision Tree | 96.13% | 96% | 96% | 98% | 90% | 97% | 93% |
-| SVM | 87.29% | 90% | 80% | 93% | 71% | 91% | 75% |
-| KNN | 96.13% | 97% | 94% | 98% | 92% | 97% | 93% |
-| Neural Network | 97.27% | 97% | 98% | 99% | 92% | 98% | 95% |
+| **Logistic Regression** | 85.64% | 88% | 78% | 93% | 65% | 90% | 71% |
+| **Random Forest** | 96.13% | 97% | 94% | 98% | 92% | 97% | 93% |
+| **Decision Tree** | 96.13% | 96% | 96% | 98% | 90% | 97% | 93% |
+| **SVM** | 87.29% | 90% | 80% | 93% | 71% | 91% | 75% |
+| **KNN** | 96.13% | 97% | 94% | 98% | 92% | 97% | 93% |
+| **Neural Network (optimised)** | 97.27% | 97% | 98% | 99% | 92% | 98% | 95% |
 
 ### **Hyperparameter Tuning with GridSearchCV**
-- **Logistic Regression:**
-   - Best Parameters: {'C': 10, 'penalty': 'l2', 'solver': 'newton-cg'}
-   - Best Accuracy: 0.8632854406130267
-
-- **Random Forest:**
-   - Best Parameters: {'max_depth': None, 'min_samples_split': 2, 'n_estimators': 200}
-   - Best Accuracy: 0.947528735632184
-
-- **Decision Tree:**
-   - Best Parameters: {'max_depth': 30, 'min_samples_leaf': 1, 'min_samples_split': 2}
-   - Best Accuracy: 0.950287356321839
-
-- **SVM:**
-   - Best Parameters: {'C': 10, 'gamma': 'scale', 'kernel': 'poly'}
-   - Best Accuracy: 0.9350670498084291
-
-- **KNN:**
-   - Best Parameters: {'algorithm': 'ball_tree', 'n_neighbors': 3, 'weights': 'distance'}
-   - Best Accuracy: 0.9530459770114943
+| Model | Best Parameters | Best Accuracy |
+| --- | --- | --- |
+| **Logistic Regression** | {'C': 10, 'penalty': 'l2', 'solver': 'newton-cg'} | 86.33% |
+| **Random Forest** | {'max_depth': None, 'min_samples_split': 2, 'n_estimators': 200} | 94.75% |
+| **Decision Tree** | {'max_depth': 30, 'min_samples_leaf': 1, 'min_samples_split': 2} | 95.03% |
+| **SVM** | {'C': 10, 'gamma': 'scale', 'kernel': 'poly'} | 93.51% |
+| **KNN** | {'algorithm': 'ball_tree', 'n_neighbors': 3, 'weights': 'distance'} | 95.30% |
 
 ### **Results: Logistic Regression**
 ![Logistic Regression](images/logisticregression_plot.png)
