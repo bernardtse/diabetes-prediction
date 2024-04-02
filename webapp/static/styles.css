@@ -1,0 +1,105 @@
+/* Global styles */
+body {
+  font-family: Arial, sans-serif;
+  background-color: #031d37;
+  margin: 0;
+  padding: 0;
+}
+
+.container {
+  max-width: 800px;
+  margin: 50px auto;
+  padding: 20px;
+  background-color: #ffffff;
+  border-radius: 10px;
+  box-shadow: 0 0 20px rgba(0, 0, 0, 0.1);
+}
+
+.header {
+  text-align: center;
+  color: #007bff;
+  font-size: 24px;
+  margin-bottom: 20px;
+}
+
+.form {
+  padding: 20px;
+  border-radius: 20px;
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+}
+
+.row {
+  margin-bottom: 20px;
+  display: flex;
+  flex-wrap: wrap;
+}
+
+.row .six.columns {
+  width: 100%; /* Change to full width for small screens */
+  margin-right: 0; /* Remove right margin */
+}
+
+.label {
+  font-weight: bold;
+  color: #333333;
+}
+
+.input-field,
+.select-field {
+  width: 100%;
+  padding: 12px;
+  border: 1px solid #ced4da;
+  border-radius: 5px;
+  box-sizing: border-box;
+  margin-bottom: 10px;
+}
+
+.button-primary.predict-button,
+.button-primary.refresh-button {
+  background-color: #007bff;
+  color: #ffffff;
+  border: none;
+  border-radius: 5px;
+  padding: 12px 0;
+  cursor: pointer;
+  transition: background-color 0.3s ease;
+  font-size: 16px;
+  font-weight: bold;
+  width: 100%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.button-primary.predict-button:hover,
+.button-primary.refresh-button:hover {
+  background-color: #0056b3;
+}
+
+.result {
+  margin-top: 20px;
+}
+
+.prediction-content {
+  text-align: center;
+  font-weight: bold;
+  font-size: 18px;
+}
+
+@media (min-width: 600px) {
+  /* Adjust column width for larger screens */
+  .row .six.columns {
+    width: calc(50% - 10px);
+    margin-right: 20px;
+  }
+
+  /* Add margin to every odd column */
+  .row .six.columns:nth-child(odd) {
+    margin-right: 20px;
+  }
+
+  /* Remove right margin from the last column */
+  .row .six.columns:last-child {
+    margin-right: 0;
+  }
+}
