@@ -95,7 +95,7 @@ The following are the parameters of the raw dataset in Kaggle:
    - **Logistic Regression:** Trained a logistic regression model as a baseline model.
    - **Random Forest:** Implemented a random forest classifier to capture non-linear relationships between features.
    - **Decision Tree:** Built a decision tree classifier to understand the decision-making process.
-   - **Support Vector Machine (SVM):** Employed SVM with different kernels (linear, polynomial, and radial basis function) to find the best separating hyperplane. In this project, a linear kernel was selected due to its computational efficiency, which is advantageous for large datasets.
+   - **Support Vector Machine (SVM):** Employed SVM with different kernels (linear, polynomial, and radial basis function) to find the best separating hyperplane. In this project, a linear kernel was selected due to its computational efficiency. It is important, however, to note that other kernels may help yield better accuracy.
    - **K-Nearest Neighbors (KNN):** Implemented KNN to classify data points based on the majority class of their nearest neighbours.
    - **Neural Network:** Constructed a neural network with multiple hidden layers using TensorFlow.
 
