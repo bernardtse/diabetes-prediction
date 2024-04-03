@@ -18,7 +18,7 @@ body {
 .header {
   text-align: center;
   color: #007bff;
-  font-size: 24px;
+  font-size: 50px;
   margin-bottom: 20px;
 }
 
@@ -29,14 +29,18 @@ body {
 }
 
 .row {
-  margin-bottom: 20px;
   display: flex;
   flex-wrap: wrap;
+  margin-bottom: 20px;
 }
 
-.row .six.columns {
-  width: 100%; /* Change to full width for small screens */
-  margin-right: 0; /* Remove right margin */
+.column {
+  flex: 1;
+  margin-right: 20px;
+}
+
+.column:last-child {
+  margin-right: 0;
 }
 
 .label {
@@ -54,10 +58,26 @@ body {
   margin-bottom: 10px;
 }
 
+.button-primary.predict-button {
+  background-color: #007bff; /* Predict button color */
+  color: #ffffff;
+}
+
+.button-primary.refresh-button {
+  background-color: #28a745; /* Refresh button color */
+  color: #ffffff;
+}
+
+.button-primary.predict-button:hover {
+  background-color: hsl(211, 93%, 32%);
+}
+
+.button-primary.refresh-button:hover {
+  background-color: #218838;
+}
+
 .button-primary.predict-button,
 .button-primary.refresh-button {
-  background-color: #007bff;
-  color: #ffffff;
   border: none;
   border-radius: 5px;
   padding: 12px 0;
@@ -68,38 +88,16 @@ body {
   width: 100%;
   display: flex;
   justify-content: center;
-  align-items: center;
-}
-
-.button-primary.predict-button:hover,
-.button-primary.refresh-button:hover {
-  background-color: #0056b3;
+  align-items: center; /* Center vertically */
 }
 
 .result {
   margin-top: 20px;
+  text-align: center; /* Center-align the text */
 }
 
 .prediction-content {
   text-align: center;
   font-weight: bold;
   font-size: 18px;
-}
-
-@media (min-width: 600px) {
-  /* Adjust column width for larger screens */
-  .row .six.columns {
-    width: calc(50% - 10px);
-    margin-right: 20px;
-  }
-
-  /* Add margin to every odd column */
-  .row .six.columns:nth-child(odd) {
-    margin-right: 20px;
-  }
-
-  /* Remove right margin from the last column */
-  .row .six.columns:last-child {
-    margin-right: 0;
-  }
 }

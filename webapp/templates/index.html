@@ -22,7 +22,12 @@
                 </div>
                 <div class="six columns">
                     <label for="age">Age:</label>
-                    <input type="number" id="age" name="age" min="0" class="u-full-width">
+                    <select id="age" name="age" class="u-full-width">
+                        <option value="less than 40">Less than 40</option>
+                        <option value="40-49">40-49</option>
+                        <option value="50-59">50-59</option>
+                        <option value="60 or older">60 or older</option>
+                    </select>
                 </div>
             </div>
             <div class="row">
@@ -117,8 +122,8 @@
             </div>
             <div class="row">
                 <div class="six columns">
-                    <label for="pdiabetes">Previous Diabetes History:</label>
-                    <select id="pdiabetes" name="pdiabetes" class="u-full-width">
+                    <label for="pdiabetes">Gestational Diabetes:</label>
+                    <select id="diabetes" name="pdiabetes" class="u-full-width">
                         <option value="0">No</option>
                         <option value="1">Yes</option>
                     </select>

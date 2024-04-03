@@ -1,10 +1,20 @@
 document.addEventListener('DOMContentLoaded', function () {
     const form = document.getElementById('prediction-form');
     const resultDiv = document.getElementById('prediction-result');
+    const refreshButton = document.getElementById('refresh-button');
 
     form.addEventListener('submit', async function (event) {
         event.preventDefault();
 
+        // Validate all required fields
+        const requiredFields = ['gender', 'age', 'family_diabetes', 'bmi', 'physicallyactive', 'smoking', 'alcohol', 'sleep', 'soundsleep', 'regularmedicine', 'junkfood', 'stress', 'bpLevel', 'pregancies', 'pdiabetes', 'urinationfreq'];
+        const missingFields = requiredFields.filter(field => !form[field].value.trim());
+        if (missingFields.length > 0) {
+            resultDiv.innerHTML = '<p>Please fill in all required fields</p>';
+            return;
+        }
+
+        // Proceed with prediction if all required fields are filled
         const inputData = {
             gender: form.gender.value,
             age: form.age.value,
@@ -19,7 +29,7 @@ document.addEventListener('DOMContentLoaded', function () {
             junkfood: form.junkfood.value,
             stress: form.stress.value,
             bpLevel: form.bpLevel.value,
-            pregnancies: form.pregnancies.value,
+            pregancies: parseInt(form.pregancies.value), // Parse as integer
             pdiabetes: form.pdiabetes.value,
             urinationfreq: form.urinationfreq.value
         };
@@ -55,5 +65,15 @@ document.addEventListener('DOMContentLoaded', function () {
             // Display error message
             resultDiv.innerHTML = '<p>An error occurred. Please try again later.</p>';
         }
+    });
+
+    // Add event listener to the refresh button
+    refreshButton.addEventListener('click', function () {
+        // Clear all form fields
+        Object.keys(form).forEach(field => {
+            form[field].value = '';
+        });
+        // Clear the result div
+        resultDiv.innerHTML = '';
     });
 });

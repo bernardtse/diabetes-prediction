@@ -56,12 +56,9 @@ REQUIRED_FIELDS = {
     'stress': 'not at all',
     'bpLevel': 'low',
     'pregancies': 0,
-    'pdiabetes': 0,
+    'pdiabetes': 0,  # corrected field name here
     'urinationfreq': 'not much'
 }
-
-from flask import jsonify
-import numpy as np
 
 # Your existing Flask route code
 @app.route('/predict', methods=['POST'])
@@ -73,6 +70,11 @@ def predict():
         # Validate input data
         if not input_data:
             raise ValueError('Input data is missing')
+
+        # Check if all required fields are present
+        missing_fields = [field for field in REQUIRED_FIELDS.keys() if field not in input_data]
+        if missing_fields:
+            raise ValueError(f'Missing input fields: {", ".join(missing_fields)}')
 
         # Prepare input vector
         X = prepare_input_vector(input_data)
@@ -98,25 +100,28 @@ def prepare_input_vector(input_data):
     X = []
     for field, default_value in REQUIRED_FIELDS.items():
         value = input_data.get(field, default_value)
+        if not value:
+            logger.warning("Missing value for field: %s" % field)
+            value = default_value
         if field in ['family_diabetes', 'smoking', 'alcohol', 'regularmedicine', 'pdiabetes']:
-            value = 1 if str(value).lower() == 'yes' else 0  # Convert value to string before calling lower()
+            value = 1 if str(value).lower() == 'yes' else 0
         elif field == 'age':
-            # Parse age range values
-            if '-' in value:
-                age_range = value.split('-')
-                try:
-                    value = np.mean([float(age_range[0]), float(age_range[1])])
-                except ValueError:
-                    logger.warning("Invalid age range value: %s" % value)
-                    value = default_value
+            logger.info("Age value received: %s" % value)
+            if value == 'less than 40':
+                value = 20
+            elif value == '40-49':
+                value = (40 + 49) / 2
+            elif value == '50-59':
+                value = (50 + 59) / 2
+            elif value == '60 or older':
+                value = 70
             else:
-                # Convert single age value to float
                 try:
-                    value = float(value)
+                    lower_bound, upper_bound = map(int, value.split('-'))
+                    value = (lower_bound + upper_bound) / 2
                 except ValueError:
                     logger.warning("Invalid age value: %s" % value)
                     value = default_value
-
         elif field == 'gender':
             value = GENDER_ENCODING.get(value.lower(), default_value)
         elif field == 'bpLevel':
@@ -133,7 +138,6 @@ def prepare_input_vector(input_data):
         X.append(float(value))
     
     return np.array([X])
-
 
 # Serve the index.html file
 @app.route('/')
