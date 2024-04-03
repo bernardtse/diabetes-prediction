@@ -33,14 +33,8 @@ The project's main goal is to gain insights into significant factors contributin
 
 ## 3. Getting Started
 
-**Kaggle**
-i. Sign in to [Kaggle](https://kaggle.com) `https://kaggle.com/`.
+### GitHub Repository
 
-ii. Go to Settings.
-
-iii. Under the API section, create and download token `kaggle.json`.
-
-**GitHub Repository**
 i. Clone the repository:
 
    ```git clone https://github.com/bernardtse/diabetes_prediction.git```
@@ -48,8 +42,16 @@ i. Clone the repository:
 ii. Navigate to the project directory:
 
    ```cd diabetes_prediction```
+   
+### Kaggle
 
-**Running the notebook in Google Colab**
+i. Sign in to [Kaggle](https://kaggle.com) `https://kaggle.com/`.
+
+ii. Go to Settings.
+
+iii. Under the API section, create and download token `kaggle.json`.
+
+### Running the notebook in Google Colaboratory (Google Colab)
 
 i. Sign in to [Google Colab](https://colab.research.google.com/) `https://colab.research.google.com/`.
 
@@ -73,8 +75,17 @@ iv. Ensure that you have the necessary libraries installed. The notebook require
 
 v. Run the notebook cells sequentially to execute the code and interact with the project.
 
-**Note**
-The notebook is designed to run on the cloud environment provided by Google Colab. It utilises the `Kaggle API` for data fetching and `Spark` for data processing. Both are automatically set up within the Colab environment. Therefore, there is no need to install Spark and the Kaggle API locally.
+### Rationale for using Google Colab, Kaggle API and PySpark
+
+The notebook is designed to run on the cloud environment provided by Google Colab. It utilises the Kaggle API for data fetching and Spark for data processing. Both are automatically set up within the Colab environment. Therefore, there is no need to install `kaggle` and `pyspark` locally.
+
+The dataset was fetched via the Kaggle API on the cloud, which was processed with PySpark before being converted to a Pandas DataFrame. This approach offers several advantages over downloading the CSV file locally and then uploading it to Google Drive for processing with Pandas:
+
+   i. **Integration**: By fetching the dataset directly from Kaggle using the Kaggle API, data acquisition process is streamlined, without the need to manually download and upload files.
+
+   ii. **Collaboration and Sharing**: Google Colab allows for easy sharing and collaboration on Jupyter notebooks, making it convenient for teams to work together on data analysis projects.
+
+   iii. **Scalability**: PySpark is designed to handle processing data in of different sizes efficiently. It can distribute the workload across multiple nodes in a cluster, enabling parallel processing. This is especially advantageous when dealing with potentially larger datasets that may not fit into memory on a single machine.
 
 
 ## 4. Documentation
