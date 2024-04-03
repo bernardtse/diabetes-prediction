@@ -81,7 +81,7 @@ The notebook is designed to run on the cloud environment provided by Google Cola
 
 The dataset was fetched via the Kaggle API on the cloud, which was processed with PySpark before being converted to a Pandas DataFrame. This approach offers several advantages over downloading the CSV file locally and then uploading it to Google Drive for processing with Pandas:
 
-- **Integration**: By fetching the dataset directly from Kaggle using the Kaggle API, data acquisition process is streamlined, without the need to manually download and upload files.
+- **Integration**: By fetching the dataset directly from Kaggle to Google Colab using the Kaggle API, data acquisition process is streamlined, without the need to manually download and upload files.
 
 - **Collaboration and Sharing**: Google Colab allows for easy sharing and collaboration on Jupyter notebooks, making it convenient for teams to work together on data analysis projects.
 
