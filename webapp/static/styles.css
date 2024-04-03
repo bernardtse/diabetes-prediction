@@ -101,3 +101,17 @@ body {
   font-weight: bold;
   font-size: 18px;
 }
+
+.flash {
+  animation: flash-animation 0.5s infinite alternate;
+}
+
+@keyframes flash-animation {
+  from {
+      opacity: 1;
+  }
+
+  to {
+      opacity: 0;
+  }
+}

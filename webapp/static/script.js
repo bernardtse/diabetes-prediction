@@ -3,7 +3,8 @@ document.addEventListener('DOMContentLoaded', function () {
     const resultDiv = document.getElementById('prediction-result');
     const refreshButton = document.getElementById('refresh-button');
 
-    form.addEventListener('submit', async function (event) {
+    // Function to handle form submission and prediction
+    async function handlePrediction(event) {
         event.preventDefault();
 
         // Validate all required fields
@@ -29,7 +30,7 @@ document.addEventListener('DOMContentLoaded', function () {
             junkfood: form.junkfood.value,
             stress: form.stress.value,
             bpLevel: form.bpLevel.value,
-            pregancies: parseInt(form.pregancies.value), // Parse as integer
+            pregancies: form.pregancies.value ? parseInt(form.pregancies.value) : null, // Parse as integer
             pdiabetes: form.pdiabetes.value,
             urinationfreq: form.urinationfreq.value
         };
@@ -51,29 +52,38 @@ document.addEventListener('DOMContentLoaded', function () {
             const data = await response.json();
             console.log('Response data:', data);
 
-            const diabetesStatus = data.diabetic; // Access correct property
-            const probability = data.probability.toFixed(2);
+            const diabetesStatus = data[0].diabetic; // Access correct property
+            const probability = data[0].probability.toFixed(2);
             console.log('Diabetes Status:', diabetesStatus);
 
             // Display the prediction result
             resultDiv.innerHTML = `<h2>Prediction Result</h2>
-                                   <p>Diabetes Status: ${diabetesStatus}</p>
+                                   <p>${diabetesStatus}</p>
                                    <p>Probability: ${probability}</p>`;
+
         } catch (error) {
             console.error('Error:', error);
 
             // Display error message
             resultDiv.innerHTML = '<p>An error occurred. Please try again later.</p>';
         }
-    });
+    }
+
+    // Add event listener to the form submission
+    form.addEventListener('submit', handlePrediction);
 
     // Add event listener to the refresh button
-    refreshButton.addEventListener('click', function () {
+    refreshButton.addEventListener('click', async function () {
         // Clear all form fields
-        Object.keys(form).forEach(field => {
-            form[field].value = '';
+        const formElements = form.querySelectorAll('input, select');
+        formElements.forEach(field => {
+            field.value = '';
         });
+
         // Clear the result div
         resultDiv.innerHTML = '';
+
+        // Fetch predictions again
+        form.dispatchEvent(new Event('submit'));
     });
 });
