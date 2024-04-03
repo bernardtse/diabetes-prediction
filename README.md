@@ -135,10 +135,12 @@ viii. **Results and Summary Report:**
 - The backend script (`app.py`) handles the prediction logic and communicates with the frontend through HTTP requests. The HTML files define the structure of the web pages, while CSS stylesheets are used for styling and layout. JavaScript (`script.js`) enhances user interactivity and handles dynamic content updates.
 
 - To run the web application locally:
-  - i. Ensure Python and Flask are installed on your system.
-  - ii. Navigate to the project directory in the terminal.
-  - iii. Run the following command to start the Flask server: `python app.py`
-  - iv. Open a web browser and go to [http://localhost:5000](http://localhost:5000) to access the web application.
+  - i. Ensure `Python` and `Flask` are installed on your system.
+  - ii. Ensure a compatable version of `TensorFlow` (version 2.15) and `Keras` (version 2.15) is installed: `pip install tensorflow==2.15`
+     - **Note:** `Keras` is installed automatically when `TensorFlow` is installed.
+  - iii. Navigate to the project directory in the terminal.
+  - iv. Run the following command to start the Flask server: `python app.py`
+  - v. Open a web browser and go to [http://localhost:5000](http://localhost:5000) to access the web application.
 
 
 ## 7. Ethical Considerations
