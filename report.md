@@ -164,6 +164,7 @@ Additionally, the development of a user-friendly web application enhances access
 
 ## 7. References
 
-- **Dataset:** https://www.kaggle.com/datasets/tigganeha4/diabetes-dataset-2019
-- **Research Paper for the Dataset:** Tigga, N. P., & Garg, S. (2020). Prediction of Type 2 Diabetes using Machine Learning Classification Methods. Procedia Computer Science, 167, 706-716. DOI: https://doi.org/10.1016/j.procs.2020.03.336
-- **Diabetes Facts & Figures - International Diabetes Federation:** https://idf.org/about-diabetes/diabetes-facts-figures/
+- **Dataset - Kaggle:** [https://www.kaggle.com/datasets/tigganeha4/diabetes-dataset-2019](https://www.kaggle.com/datasets/tigganeha4/diabetes-dataset-2019)
+- **Research Paper for the Dataset:** Tigga, N. P., & Garg, S. (2020). Prediction of Type 2 Diabetes using Machine Learning Classification Methods. Procedia Computer Science, 167, 706-716. DOI: [https://doi.org/10.1016/j.procs.2020.03.336](https://doi.org/10.1016/j.procs.2020.03.336)
+- **Diabetes Facts & Figures - International Diabetes Federation:** [https://idf.org/about-diabetes/diabetes-facts-figures/](https://idf.org/about-diabetes/diabetes-facts-figures/)
+- **Diabetes - NHS:** [https://www.nhs.uk/conditions/diabetes](https://www.nhs.uk/conditions/diabetes)/
