@@ -26,7 +26,7 @@ The project's main goal is to gain insights into significant factors contributin
 
 ## 2. Requirements
 
-- A web browser capable of running Google Colab
+- A web browser capable of running Google Colaboratory (Google Colab)
 - A Kaggle account (for data fetching)
 - A Google account (for storage of data)
 
@@ -51,7 +51,7 @@ ii. Go to Settings.
 
 iii. Under the API section, create and download token `kaggle.json`.
 
-### Running the notebook in Google Colaboratory (Google Colab)
+### Running the notebook in Google Colab
 
 i. Sign in to [Google Colab](https://colab.research.google.com/) `https://colab.research.google.com/`.
 
