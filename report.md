@@ -157,7 +157,11 @@ The following are the parameters of the raw dataset in Kaggle:
 
 The exploration into developing a diabetes prediction model using machine learning techniques has provided valuable insights. The Neural Network model emerges as the most accurate and balanced performer in predicting Type 2 Diabetes, closely followed by Random Forest, Decision Tree, and KNN, which also demonstrate promising results. However, SVM and Logistic Regression exhibit comparatively lower accuracy and performance. 
 
-Through analysis with Random Forest, we identified the top three features influencing predictions: RegularMedicine, Age, and BMI. Hyperparameter tuning using GridSearchCV notably enhanced the performance of SVM and marginally improved Logistic Regression, although for Decision Tree, Random Forest, and KNN, the tuning process showed diminishing returns, with no significant improvements observed. Considering computational resources, the Neural Network model stands out as the recommended choice for accurate and reliable diabetes prediction, with Random Forest, Decision Tree, and KNN remaining viable alternatives due to their balanced accuracy and efficiency.
+Through analysis with Random Forest, we identified the top three features influencing predictions: RegularMedicine, Age, and BMI.
+
+Hyperparameter tuning using GridSearchCV notably enhanced the performance of SVM and marginally improved Logistic Regression, although for Decision Tree, Random Forest, and KNN, the tuning process showed diminishing returns, with no significant improvements observed.
+
+Considering computational resources, the Neural Network model stands out as the recommended choice for accurate and reliable diabetes prediction, with Random Forest, Decision Tree, and KNN remaining viable alternatives due to their balanced accuracy and efficiency.
 
 Additionally, the development of a user-friendly web application enhances accessibility to the predictive model, allowing users to input health parameters and receive diabetes risk predictions along with explanatory insights. This web application provides an intuitive interface for users, further contributing to the dissemination of the predictive tool in practical healthcare settings.
 
@@ -167,4 +171,4 @@ Additionally, the development of a user-friendly web application enhances access
 - **Dataset - Kaggle:** [https://www.kaggle.com/datasets/tigganeha4/diabetes-dataset-2019](https://www.kaggle.com/datasets/tigganeha4/diabetes-dataset-2019)
 - **Research Paper for the Dataset:** Tigga, N. P., & Garg, S. (2020). Prediction of Type 2 Diabetes using Machine Learning Classification Methods. Procedia Computer Science, 167, 706-716. DOI: [https://doi.org/10.1016/j.procs.2020.03.336](https://doi.org/10.1016/j.procs.2020.03.336)
 - **Diabetes Facts & Figures - International Diabetes Federation:** [https://idf.org/about-diabetes/diabetes-facts-figures/](https://idf.org/about-diabetes/diabetes-facts-figures/)
-- **Diabetes - NHS:** [https://www.nhs.uk/conditions/diabetes](https://www.nhs.uk/conditions/diabetes)/
+- **Diabetes - NHS:** [https://www.nhs.uk/conditions/diabetes/](https://www.nhs.uk/conditions/diabetes/)
