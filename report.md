@@ -122,14 +122,15 @@ The following are the parameters of the raw dataset in Kaggle:
 | **Decision Tree** | 96.13% | 96% | 96% | 98% | 90% | 97% | 93% |
 | **SVM** | 87.29% | 90% | 80% | 93% | 71% | 91% | 75% |
 | **KNN** | 96.13% | 97% | 94% | 98% | 92% | 97% | 93% |
-| **Neural Network (optimised)** | 97.27% | 97% | 98% | 99% | 92% | 98% | 95% |
+| **Neural Network (optimised)** | 97.24% | 97% | 98% | 99% | 92% | 98% | 95% |
 
 ### **Hyperparameter Tuning with GridSearchCV**
+
 | Model | Best Parameters | Best Accuracy |
 | --- | --- | --- |
 | **Logistic Regression** | {'C': 10, 'penalty': 'l2', 'solver': 'newton-cg'} | 86.33% |
-| **Random Forest** | {'max_depth': None, 'min_samples_split': 2, 'n_estimators': 200} | 94.75% |
-| **Decision Tree** | {'max_depth': 30, 'min_samples_leaf': 1, 'min_samples_split': 2} | 95.03% |
+| **Random Forest** | {'max_depth': None, 'min_samples_split': 2, 'n_estimators': 200} | 94.89% |
+| **Decision Tree** | {'max_depth': 20, 'min_samples_leaf': 1, 'min_samples_split': 2} | 94.75% |
 | **SVM** | {'C': 10, 'gamma': 'scale', 'kernel': 'poly'} | 93.51% |
 | **KNN** | {'algorithm': 'ball_tree', 'n_neighbors': 3, 'weights': 'distance'} | 95.30% |
 
