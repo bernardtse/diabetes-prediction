@@ -55,7 +55,7 @@ iii. Under the API section, create and download token `kaggle.json`.
 
 i. Sign in to [Google Colab](https://colab.research.google.com/) `https://colab.research.google.com/`.
 
-ii. Upload the notebook file `diabetes_prediction.ipynb` to Google Colab.
+ii. Upload the notebook file `DiabetesPrediction.ipynb` to Google Colab.
 
 iii. Upload `kaggle.json` to the path specified in the Jupyter Notebook in Google Drive (Default path: `My Drive`). If `kaggle.json` was already installed previously, modify the `kaggle_token_path` variable in the notebook to specify the path for Kaggle token.
 
@@ -117,7 +117,7 @@ iii. **Exploratory Data Analysis:**
    
 iv. **Model Building:**
    - Logistic Regression
-   - Random 
+   - Random Forest
    - Decision Tree
    - Support Vector Machine (SVM)
    - K-Nearest Neighbors (KNN)
@@ -140,7 +140,7 @@ viii. **Results and Summary Report:**
 
 ## 6. **Model Visualisation Using Web App**
 
-- For the visualisation of the diabetes prediction model, a web application was developed using Python Flask for the backend, HTML and CSS for the frontend, and JavaScript (`script.js`) for interactivity stored in [`webapp/`](webapp/) folder.
+- For the visualisation of the diabetes prediction model, a web application was developed using Python Flask for the backend, HTML and CSS for the frontend, and JavaScript (`script.js`) for interactivity stored in the [`webapp/`](webapp/) folder.
 
 - The web application provides an intuitive interface for users to input their health parameters and receive predictions of their diabetes risk. It utilises the trained machine learning model to generate predictions based on the input data.
 
