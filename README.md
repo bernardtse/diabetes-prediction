@@ -7,7 +7,7 @@
 3. [Getting Started](#3-getting-started)
 4. [Documentation](#4-documentation)
 5. [Notebook Contents](#5-notebook-contents)
-6. [Model Visualisation using Web APP](#6-model-visualisation-using-web-app)
+6. [Model Visualisation using Web App](#6-model-visualisation-using-web-app)
 7. [Ethical Considerations](#7-ethical-considerations)
 8. [Conclusion](#8-conclusion)
 9. [References](#9-references)
