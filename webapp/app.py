@@ -77,7 +77,7 @@ def predict():
         # Determine the diabetes status for each prediction
         results = []
         for prediction in predictions:
-            diabetic = "High Risk - Contact Your GP for Further Evaluation." if prediction[0] >= 1.5 else "Within Safe Range – Regular Follow-up Advised."
+            diabetic = "High Risk - Contact Your GP for Further Evaluation." if prediction[0] >= 0.5 else "Within Safe Range – Regular Follow-up Advised."
             results.append({'diabetic': diabetic, 'probability': float(prediction[0])})
 
         return jsonify(results)
