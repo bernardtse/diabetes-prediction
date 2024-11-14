@@ -6,9 +6,12 @@ body {
   padding: 0;
 }
 
+img {
+  max-width: 100%
+}
 .container {
   max-width: 800px;
-  margin: 50px auto;
+  margin: 20px auto;
   padding: 20px;
   background-color: #ffffff;
   border-radius: 10px;
