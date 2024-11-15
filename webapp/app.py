@@ -16,7 +16,7 @@ try:
         loaded_model_json = json_file.read()
 
     loaded_model = model_from_json(loaded_model_json)
-    loaded_model.load_weights("model_weights.h5")
+    loaded_model.load_weights("model.weights.h5")
 
     logger.info("Model loaded successfully!")
 except Exception as e:
