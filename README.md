@@ -152,7 +152,7 @@ viii. **Results and Summary Report:**
      - **Note:** `Keras` is installed automatically when `TensorFlow` is installed.
   - iii. Navigate to the `webapp/` directory in the terminal: `cd webapp`
   - iv. Run the following command to start the Flask server: `python app.py`
-  - v. Open a web browser and go to [http://localhost:5000](http://localhost:5000) to access the web application.
+  - v. Open a web browser and go to [http://127.0.0.1:5000](http://127.0.0.1:5000) to access the web application.
 
 
 ## 7. Ethical Considerations
