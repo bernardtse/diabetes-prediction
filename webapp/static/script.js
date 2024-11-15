@@ -8,7 +8,7 @@ document.addEventListener('DOMContentLoaded', function () {
         event.preventDefault();
 
         // Validate all required fields
-        const requiredFields = ['gender', 'age', 'family_diabetes', 'bmi', 'physicallyactive', 'smoking', 'alcohol', 'sleep', 'soundsleep', 'regularmedicine', 'junkfood', 'stress', 'bpLevel', 'pregancies', 'pdiabetes', 'urinationfreq'];
+        const requiredFields = ['gender', 'age', 'family_diabetes', 'bmi', 'physicallyactive', 'smoking', 'alcohol', 'sleep', 'soundsleep', 'regularmedicine', 'junkfood', 'stress', 'bpLevel', 'pregnancies', 'pdiabetes', 'urinationfreq'];
         const missingFields = requiredFields.filter(field => !form[field].value.trim());
         if (missingFields.length > 0) {
             resultDiv.innerHTML = '<p>Please fill in all required fields</p>';
@@ -20,21 +20,22 @@ document.addEventListener('DOMContentLoaded', function () {
             gender: form.gender.value,
             age: form.age.value,
             family_diabetes: form.family_diabetes.value,
-            bmi: form.bmi.value,
+            bmi: form.bmi.value ? Number(form.bmi.value) : null, // Parse as number
             physicallyactive: form.physicallyactive.value,
             smoking: form.smoking.value,
             alcohol: form.alcohol.value,
-            sleep: form.sleep.value,
-            soundsleep: form.soundsleep.value,
+            sleep: form.sleep.value ? Number(form.sleep.value) : null, // Parse as number
+            soundsleep: form.soundsleep.value ? Number(form.soundsleep.value) : null, // Parse as number
             regularmedicine: form.regularmedicine.value,
             junkfood: form.junkfood.value,
             stress: form.stress.value,
             bpLevel: form.bpLevel.value,
-            pregancies: form.pregancies.value ? parseInt(form.pregancies.value) : null, // Parse as integer
+            pregnancies: form.pregnancies.value ? parseInt(form.pregnancies.value) : null, // Parse as integer
             pdiabetes: form.pdiabetes.value,
             urinationfreq: form.urinationfreq.value
         };
-
+        console.log("test");
+        console.log("inputData:", inputData);
         try {
             const url = '/predict';
             const response = await fetch(url, {

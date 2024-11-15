@@ -24,6 +24,7 @@ except Exception as e:
     raise e
 
 # Define encoding dictionaries
+AGE_ENCODING = {'less than 40': 0, '40-49': 1, '50-59': 2,'60 or older': 3}
 GENDER_ENCODING = {'male': 0, 'female': 1}
 BP_LEVEL_ENCODING = {'low': 0, 'normal': 1, 'high': 2}
 PHYSICALLY_ACTIVE_ENCODING = {'none': 0, 'less than half an hr': 1, 'more than half an hr': 2, 'one hr or more': 3}
@@ -33,21 +34,21 @@ URINATION_FREQ_ENCODING = {'not much': 0, 'quite often': 1}
 
 # Define required fields and their default values
 REQUIRED_FIELDS = {
-    'age': '0-39',
+    'age': 'less than 40',
     'gender': 'male',
-    'family_diabetes': 0,
+    'family_diabetes': 'no',
     'physicallyactive': 'none',
     'bmi': 0.0,
-    'smoking': 0,
-    'alcohol': 0,
+    'smoking': 'no',
+    'alcohol': 'no',
     'sleep': 0,
     'soundsleep': 0,
-    'regularmedicine': 0,
+    'regularmedicine': 'no',
     'junkfood': 'occasionally',
     'stress': 'not at all',
     'bpLevel': 'low',
-    'pregancies': 0,
-    'pdiabetes': 0,
+    'pregnancies': 0,
+    'pdiabetes': 'no',
     'urinationfreq': 'not much'
 }
 
@@ -69,7 +70,6 @@ def predict():
         X = []
         for _ in range(len(input_data)):
             X.append(prepare_input_vector(input_data[_]))
-
         # Make prediction
         predictions = loaded_model.predict(np.array(X))
         logger.debug("Predictions: %s", predictions)  # Add this line
@@ -99,22 +99,7 @@ def prepare_input_vector(input_data):
         if field in ['family_diabetes', 'smoking', 'alcohol', 'regularmedicine', 'pdiabetes']:
             value = 1 if str(value).lower() == 'yes' else 0
         elif field == 'age':
-            logger.info("Age value received: %s" % value)
-            if value == 'less than 40':
-                value = 20
-            elif value == '40-49':
-                value = (40 + 49) / 2
-            elif value == '50-59':
-                value = (50 + 59) / 2
-            elif value == '60 or older':
-                value = 70
-            else:
-                try:
-                    lower_bound, upper_bound = map(int, value.split('-'))
-                    value = (lower_bound + upper_bound) / 2
-                except ValueError:
-                    logger.warning("Invalid age value: %s" % value)
-                    value = default_value
+            value = AGE_ENCODING.get(value.lower(), default_value)
         elif field == 'gender':
             value = GENDER_ENCODING.get(value.lower(), default_value)
         elif field == 'bpLevel':
@@ -129,7 +114,7 @@ def prepare_input_vector(input_data):
             value = URINATION_FREQ_ENCODING.get(value.lower(), default_value)
 
         X.append(float(value))
-
+    print("X: ", X)
     return np.array(X)
 
 @app.route('/')
