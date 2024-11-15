@@ -70,6 +70,7 @@ def predict():
         X = []
         for _ in range(len(input_data)):
             X.append(prepare_input_vector(input_data[_]))
+        
         # Make prediction
         predictions = loaded_model.predict(np.array(X))
         logger.debug("Predictions: %s", predictions)  # Add this line

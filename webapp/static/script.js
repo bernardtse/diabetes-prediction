@@ -34,8 +34,9 @@ document.addEventListener('DOMContentLoaded', function () {
             pdiabetes: form.pdiabetes.value,
             urinationfreq: form.urinationfreq.value
         };
-        console.log("test");
-        console.log("inputData:", inputData);
+    
+        console.log("inputData:", inputData); // check inputData
+        
         try {
             const url = '/predict';
             const response = await fetch(url, {
