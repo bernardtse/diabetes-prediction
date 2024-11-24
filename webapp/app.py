@@ -3,6 +3,7 @@ from keras.models import model_from_json
 import numpy as np
 import logging
 import json
+import joblib
 
 app = Flask(__name__)
 
@@ -16,11 +17,14 @@ try:
         loaded_model_json = json_file.read()
 
     loaded_model = model_from_json(loaded_model_json)
-    loaded_model.load_weights("model_weights.h5")
+    loaded_model.load_weights("model.weights.h5")
 
-    logger.info("Model loaded successfully!")
+    # Load the scaler
+    scaler = joblib.load('scaler.pkl')  # Ensure 'scaler.pkl' is in the same directory or provide the correct path
+
+    logger.info("Model and scaler loaded successfully!")
 except Exception as e:
-    logger.error("Error loading model:", exc_info=True)
+    logger.error("Error loading model or scaler:", exc_info=True)
     raise e
 
 # Define encoding dictionaries
@@ -70,9 +74,12 @@ def predict():
         X = []
         for _ in range(len(input_data)):
             X.append(prepare_input_vector(input_data[_]))
-        
+
+        # Scale the data
+        X_scaled = scaler.transform(np.array(X))  # Apply the scaler here
+
         # Make prediction
-        predictions = loaded_model.predict(np.array(X))
+        predictions = loaded_model.predict(X_scaled)
         logger.debug("Predictions: %s", predictions)  # Add this line
 
         # Determine the diabetes status for each prediction
