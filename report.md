@@ -129,8 +129,8 @@ The following are the parameters of the raw dataset in Kaggle:
 | Model | Best Parameters | Best Accuracy |
 | --- | --- | --- |
 | **Logistic Regression** | {'C': 10, 'penalty': 'l2', 'solver': 'newton-cg'} | 86.33% |
-| **Random Forest** | {'max_depth': None, 'min_samples_split': 2, 'n_estimators': 200} | 94.89% |
-| **Decision Tree** | {'max_depth': 20, 'min_samples_leaf': 1, 'min_samples_split': 2} | 94.75% |
+| **Random Forest** | {'max_depth': None, 'min_samples_split': 2, 'n_estimators': 200} | 95.03% |
+| **Decision Tree** | {'max_depth': 20, 'min_samples_leaf': 1, 'min_samples_split': 2} | 94.89% |
 | **SVM** | {'C': 10, 'gamma': 'scale', 'kernel': 'poly'} | 93.51% |
 | **KNN** | {'algorithm': 'ball_tree', 'n_neighbors': 3, 'weights': 'distance'} | 95.30% |
 
@@ -162,7 +162,7 @@ Through analysis with Random Forest, we identified the top three features influe
 
 Hyperparameter tuning using GridSearchCV notably enhanced the performance of SVM and marginally improved Logistic Regression, although for Decision Tree, Random Forest, and KNN, the tuning process showed diminishing returns, with no significant improvements observed.
 
-Considering computational resources, the Neural Network model stands out as the recommended choice for accurate and reliable diabetes prediction, with Random Forest, Decision Tree, and KNN remaining viable alternatives due to their balanced accuracy and efficiency.
+The Neural Network model has an edge over other models as the recommended choice for accurate and reliable diabetes prediction, with Random Forest, Decision Tree, and KNN remaining viable alternatives due to their balanced accuracy and efficiency.
 
 Additionally, the development of a user-friendly web application enhances accessibility to the predictive model, allowing users to input health parameters and receive diabetes risk predictions along with explanatory insights. This web application provides an intuitive interface for users, further contributing to the dissemination of the predictive tool in practical healthcare settings.
 
