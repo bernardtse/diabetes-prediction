@@ -148,7 +148,7 @@ viii. **Results and Summary Report:**
 
 - To run the web application locally:
   - i. Ensure `Python` and `Flask` are installed on your system.
-  - ii. Ensure a compatable version of `TensorFlow` (version 2.15) and `Keras` (version 2.15) is installed: `pip install tensorflow==2.15`
+  - ii. Ensure a compatable version of `TensorFlow` (version 2.17) and `Keras` (version 3.2) is installed: `pip install tensorflow==2.17`
      - **Note:** `Keras` is installed automatically when `TensorFlow` is installed.
   - iii. Navigate to the `webapp/` directory in the terminal: `cd webapp`
   - iv. Run the following command to start the Flask server: `python app.py`
