@@ -3,7 +3,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Diabetes Prediction App</title>
+    <title>DiabPredict+ - Diabetes Risk Assessment App</title>
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/normalize/8.0.1/normalize.min.css">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/skeleton/2.0.4/skeleton.min.css">
     <link rel="stylesheet" href="{{ url_for('static', filename='styles.css') }}">
@@ -16,16 +16,8 @@
         <form id="prediction-form" class="form">
             <div class="row">
                 <div class="six columns">
-                    <label for="gender">Gender:</label>
-                    <select id="gender" name="gender" class="u-full-width">
-                        <option value="" disabled selected>Select...</option>
-                        <option value="male">Male</option>
-                        <option value="female">Female</option>
-                    </select>
-                </div>
-                <div class="six columns">
-                    <label for="age">Age:</label>
-                    <select id="age" name="age" class="u-full-width">
+                    <label for="Age">Age:</label>
+                    <select id="Age" name="Age" class="u-full-width">
                         <option value="" disabled selected>Select...</option>
                         <option value="less than 40">Less than 40</option>
                         <option value="40-49">40-49</option>
@@ -33,25 +25,27 @@
                         <option value="60 or older">60 or older</option>
                     </select>
                 </div>
+                <div class="six columns">
+                    <label for="Gender">Gender:</label>
+                    <select id="Gender" name="Gender" class="u-full-width">
+                        <option value="" disabled selected>Select...</option>
+                        <option value="male">Male</option>
+                        <option value="female">Female</option>
+                    </select>
+                </div>
             </div>
             <div class="row">
                 <div class="six columns">
-                    <label for="family_diabetes">Family Diabetes:</label>
-                    <select id="family_diabetes" name="family_diabetes" class="u-full-width">
+                    <label for="FamilyDiabetes">Family History of Diabetes:</label>
+                    <select id="FamilyDiabetes" name="FamilyDiabetes" class="u-full-width">
                         <option value="" disabled selected>Select...</option>
                         <option value="no">No</option>
                         <option value="yes">Yes</option>
                     </select>
                 </div>
                 <div class="six columns">
-                    <label for="bmi">BMI:</label>
-                    <input type="number" id="bmi" name="bmi" min="0" step="0.01" class="u-full-width">
-                </div>
-            </div>
-            <div class="row">
-                <div class="six columns">
-                    <label for="physicallyactive">Physically Active Level:</label>
-                    <select id="physicallyactive" name="physicallyactive" class="u-full-width">
+                    <label for="PhysicallyActive">Daily Physical Activities:</label>
+                    <select id="PhysicallyActive" name="PhysicallyActive" class="u-full-width">
                         <option value="" disabled selected>Select...</option>
                         <option value="none">None</option>
                         <option value="less than half an hr">Less than half an hour</option>
@@ -59,9 +53,15 @@
                         <option value="one hr or more">One hour or more</option>
                     </select>
                 </div>
+            </div>
+            <div class="row">
                 <div class="six columns">
-                    <label for="smoking">Smoking:</label>
-                    <select id="smoking" name="smoking" class="u-full-width">
+                    <label for="BMI">BMI:</label>
+                    <input type="number" id="BMI" name="BMI" min="0" step="0.01" class="u-full-width">
+                </div>
+                <div class="six columns">
+                    <label for="Smoking">Smoking:</label>
+                    <select id="Smoking" name="Smoking" class="u-full-width">
                         <option value="" disabled selected>Select...</option>
                         <option value="no">No</option>
                         <option value="yes">Yes</option>
@@ -70,26 +70,26 @@
             </div>
             <div class="row">
                 <div class="six columns">
-                    <label for="alcohol">Alcohol Consumption:</label>
-                    <select id="alcohol" name="alcohol" class="u-full-width">
+                    <label for="Alcohol">Alcohol Consumption:</label>
+                    <select id="Alcohol" name="Alcohol" class="u-full-width">
                         <option value="" disabled selected>Select...</option>
                         <option value="no">No</option>
                         <option value="yes">Yes</option>
                     </select>
                 </div>
                 <div class="six columns">
-                    <label for="sleep">Hours of Sleep:</label>
-                    <input type="number" id="sleep" name="sleep" min="0" class="u-full-width">
+                    <label for="Sleep">Daily Hours of Sleep:</label>
+                    <input type="number" id="Sleep" name="Sleep" min="0" class="u-full-width">
                 </div>
             </div>
             <div class="row">
                 <div class="six columns">
-                    <label for="soundsleep">Hours of Sound Sleep:</label>
-                    <input type="number" id="soundsleep" name="soundsleep" min="0" class="u-full-width">
+                    <label for="SoundSleep">Daily Hours of Sound Sleep:</label>
+                    <input type="number" id="SoundSleep" name="SoundSleep" min="0" class="u-full-width">
                  </div>
                 <div class="six columns">
-                    <label for="regularmedicine">Regular Medicine:</label>
-                    <select id="regularmedicine" name="regularmedicine" class="u-full-width">
+                    <label for="RegularMedicine">Regular Medicine:</label>
+                    <select id="RegularMedicine" name="RegularMedicine" class="u-full-width">
                         <option value="" disabled selected>Select...</option>
                         <option value="no">No</option>
                         <option value="yes">Yes</option>
@@ -98,8 +98,8 @@
             </div>
             <div class="row">
                 <div class="six columns">
-                    <label for="junkfood">Junk Food Consumption:</label>
-                    <select id="junkfood" name="junkfood" class="u-full-width">
+                    <label for="JunkFood">Junk Food Consumption:</label>
+                    <select id="JunkFood" name="JunkFood" class="u-full-width">
                         <option value="" disabled selected>Select...</option>
                         <option value="occasionally">Occasionally</option>
                         <option value="often">Often</option>
@@ -108,8 +108,8 @@
                     </select>
                 </div>
                 <div class="six columns">
-                    <label for="stress">Stress Level:</label>
-                    <select id="stress" name="stress" class="u-full-width">
+                    <label for="Stress">Stress Level:</label>
+                    <select id="Stress" name="Stress" class="u-full-width">
                         <option value="" disabled selected>Select...</option>
                         <option value="not at all">Not at all</option>
                         <option value="sometimes">Sometimes</option>
@@ -120,8 +120,8 @@
             </div>
             <div class="row">
                 <div class="six columns">
-                    <label for="bpLevel">Blood Pressure Level:</label>
-                    <select id="bpLevel" name="bpLevel" class="u-full-width">
+                    <label for="BPLevel">Blood Pressure Level:</label>
+                    <select id="BPLevel" name="BPLevel" class="u-full-width">
                         <option value="" disabled selected>Select...</option>
                         <option value="low">Low</option>
                         <option value="normal">Normal</option>
@@ -129,22 +129,22 @@
                     </select>
                 </div>
                 <div class="six columns">
-                    <label for="pregnancies">Number of Pregnancies:</label>
-                    <input type="number" id="pregnancies" name="pregnancies" min="0" class="u-full-width">
+                    <label for="Pregnancies">Number of Pregnancies:</label>
+                    <input type="number" id="Pregnancies" name="Pregnancies" min="0" class="u-full-width">
                 </div>
             </div>
             <div class="row">
                 <div class="six columns">
-                    <label for="pdiabetes">Gestational Diabetes:</label>
-                    <select id="pdiabetes" name="pdiabetes" class="u-full-width">
+                    <label for="GDiabetes">Records of Gestational Diabetes:</label>
+                    <select id="GDiabetes" name="GDiabetes" class="u-full-width">
                         <option value="" disabled selected>Select...</option>
                         <option value="no">No</option>
                         <option value="yes">Yes</option>
                     </select>
                 </div>
                 <div class="six columns">
-                    <label for="urinationfreq">Urination Frequency:</label>
-                    <select id="urinationfreq" name="urinationfreq" class="u-full-width">
+                    <label for="UrinationFreq">Urination Frequency:</label>
+                    <select id="UrinationFreq" name="UrinationFreq" class="u-full-width">
                         <option value="" disabled selected>Select...</option>
                         <option value="not much">Not much</option>
                         <option value="quite often">Quite often</option>
@@ -153,7 +153,7 @@
             </div>
             <div class="row">
                 <div class="twelve columns">
-                    <button type="submit" class="button-primary predict-button">Predict</button>
+                    <button type="submit" class="button-primary predict-button">Analyse</button>
                     <button type="button" id="refresh-button" class="button-primary refresh-button">Refresh</button>
                 </div>
             </div>

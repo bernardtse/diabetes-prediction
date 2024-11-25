@@ -8,7 +8,7 @@ document.addEventListener('DOMContentLoaded', function () {
         event.preventDefault();
 
         // Validate all required fields
-        const requiredFields = ['gender', 'age', 'family_diabetes', 'bmi', 'physicallyactive', 'smoking', 'alcohol', 'sleep', 'soundsleep', 'regularmedicine', 'junkfood', 'stress', 'bpLevel', 'pregnancies', 'pdiabetes', 'urinationfreq'];
+        const requiredFields = ['Age', 'Gender', 'FamilyDiabetes', 'PhysicallyActive', 'BMI', 'Smoking', 'Alcohol', 'Sleep', 'SoundSleep', 'RegularMedicine', 'JunkFood', 'Stress', 'BPLevel', 'Pregnancies', 'GDiabetes', 'UrinationFreq'];
         const missingFields = requiredFields.filter(field => !form[field].value.trim());
         if (missingFields.length > 0) {
             resultDiv.innerHTML = '<p>Please fill in all required fields</p>';
@@ -17,22 +17,22 @@ document.addEventListener('DOMContentLoaded', function () {
 
         // Proceed with prediction if all required fields are filled
         const inputData = {
-            gender: form.gender.value,
-            age: form.age.value,
-            family_diabetes: form.family_diabetes.value,
-            bmi: form.bmi.value ? Number(form.bmi.value) : null, // Parse as number
-            physicallyactive: form.physicallyactive.value,
-            smoking: form.smoking.value,
-            alcohol: form.alcohol.value,
-            sleep: form.sleep.value ? Number(form.sleep.value) : null, // Parse as number
-            soundsleep: form.soundsleep.value ? Number(form.soundsleep.value) : null, // Parse as number
-            regularmedicine: form.regularmedicine.value,
-            junkfood: form.junkfood.value,
-            stress: form.stress.value,
-            bpLevel: form.bpLevel.value,
-            pregnancies: form.pregnancies.value ? parseInt(form.pregnancies.value) : null, // Parse as integer
-            pdiabetes: form.pdiabetes.value,
-            urinationfreq: form.urinationfreq.value
+            Age: form.Age.value,
+            Gender: form.Gender.value,
+            FamilyDiabetes: form.FamilyDiabetes.value,
+            PhysicallyActive: form.PhysicallyActive.value,
+            BMI: form.BMI.value ? Number(form.BMI.value) : null, // Parse as number
+            Smoking: form.Smoking.value,
+            Alcohol: form.Alcohol.value,
+            Sleep: form.Sleep.value ? Number(form.Sleep.value) : null, // Parse as number
+            SoundSleep: form.SoundSleep.value ? Number(form.SoundSleep.value) : null, // Parse as number
+            RegularMedicine: form.RegularMedicine.value,
+            JunkFood: form.JunkFood.value,
+            Stress: form.Stress.value,
+            BPLevel: form.BPLevel.value,
+            Pregnancies: form.Pregnancies.value ? parseInt(form.Pregnancies.value) : null, // Parse as integer
+            GDiabetes: form.GDiabetes.value,
+            UrinationFreq: form.UrinationFreq.value
         };
     
         console.log("inputData:", inputData); // check inputData
@@ -59,9 +59,9 @@ document.addEventListener('DOMContentLoaded', function () {
             console.log('Diabetes Status:', diabetesStatus);
 
             // Display the prediction result
-            resultDiv.innerHTML = `<h2>Prediction Result</h2>
-                                   <p>${diabetesStatus}</p>
-                                   <p>Probability: ${probability}</p>`;
+            resultDiv.innerHTML = `<h2>Assessment Result</h2>
+                                   <h5>${diabetesStatus}</h5>
+                                   <h5>Probability: ${probability}</h5>`;
 
         } catch (error) {
             console.error('Error:', error);
