@@ -37,11 +37,11 @@ The project's main goal is to gain insights into significant factors contributin
 
 i. Clone the repository:
 
-   ```git clone https://github.com/bernardtse/diabetes_prediction.git```
+   ```git clone https://github.com/bernardtse/diabetes-prediction.git```
 
 ii. Navigate to the project directory:
 
-   ```cd diabetes_prediction```
+   ```cd diabetes-prediction```
    
 ### Kaggle
 
