@@ -61,7 +61,7 @@ iii. Upload `kaggle.json` to the path specified in the Jupyter Notebook in Googl
 
 iv. Ensure that you have the necessary libraries installed. The notebook requires the following libraries:
 
-   - `Pandas`
+   - `pandas`
    - `Numpy`
    - `Matplotlib`
    - `seaborn`
@@ -79,7 +79,7 @@ v. Run the notebook cells sequentially to execute the code and interact with the
 
 The notebook is designed to run on the cloud environment provided by Google Colab. It utilises the Kaggle API for data fetching and Spark for data processing. Both are automatically set up within the Colab environment. Therefore, there is no need to install `kaggle` and `pyspark` locally.
 
-The dataset was fetched via the Kaggle API on the cloud, which was processed with PySpark before being converted to a Pandas DataFrame. This approach offers several advantages over downloading the CSV file locally and then uploading it to Google Drive for processing with Pandas:
+The dataset was fetched via the Kaggle API on the cloud, which was processed with PySpark before being converted to a pandas DataFrame. This approach offers several advantages over downloading the CSV file locally and then uploading it to Google Drive for processing with pandas:
 
 - **Integration**: By fetching the dataset directly from Kaggle to Google Colab using the Kaggle API, data acquisition process is streamlined, without the need to manually download and upload files.
 
